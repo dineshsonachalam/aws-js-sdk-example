@@ -17,8 +17,8 @@ jobs:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           run: |
-            npm i
-            npm start &
+            npm i && node app.js &
+            npm start
             curl --location --request GET 'http://0.0.0.0:5000/vpc/regions'
             npm test
             
