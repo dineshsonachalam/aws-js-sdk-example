@@ -10,12 +10,12 @@ docker-compose up
 npm i && npm start
 ```
 
-### Run test:
+### Run test
 ```sh
 npm test
 ```
 
-### API Docs:
+### API Docs
 
 **Live URL:** http://0.0.0.0:5000/docs
 
