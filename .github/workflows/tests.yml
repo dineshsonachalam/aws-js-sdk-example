@@ -24,7 +24,7 @@ jobs:
             npm test
 
   upload-docker-image:
-    needs: integration-tests
+    needs: tests
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
