@@ -19,7 +19,9 @@ jobs:
           run: |
             docker build --no-cache -t dineshsonachalam/aws-js-sdk-example:latest -f Dockerfile .
             docker-compose up -d
-            curl --location --request GET 'http://0.0.0.0:5000/vpc/regions'
+            docker images
+            docker ps
+            # curl --location --request GET 'http://0.0.0.0:5000/vpc/regions'
             npm test
             
   upload-docker-image:
