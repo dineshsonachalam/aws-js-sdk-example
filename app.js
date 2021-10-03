@@ -3,8 +3,8 @@ const cors = require("cors");
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 const vpcRouter = require("./routes/vpc");
-
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+var HOST = "0.0.0.0";
 
 const options = {
 	definition: {
@@ -33,4 +33,4 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/vpc", vpcRouter);
-app.listen(PORT, () => console.log(`The server is running on port ${PORT}`));
+app.listen(PORT, HOST, () => console.log(`The server is running on port ${PORT}`));
