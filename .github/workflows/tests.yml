@@ -21,6 +21,7 @@ jobs:
             docker-compose up -d
             docker images
             docker ps
+            npm i
             # curl --location --request GET 'http://0.0.0.0:5000/vpc/regions'
             npm test
             
